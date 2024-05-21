@@ -1,76 +1,48 @@
 import project1 from "../assets/projects/project-1.jpg";
 import project2 from "../assets/projects/project-2.jpg";
-import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
-export const HERO_CONTENT = `I am a passionate full stack developer with a knack for crafting robust and scalable web applications. With 5 years of hands-on experience, I have honed my skills in front-end technologies like React and Next.js, as well as back-end technologies like Node.js, MySQL, PostgreSQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.`;
+export const HERO_CONTENT = `I'm a passionate full stack developer skilled in JavaScript, React, Tailwind CSS, React Native, Node.js, MySQL, and MongoDB. I've crafted robust web and mobile apps like Site Tracker, Smart Wallet, Rent a Port, and TechnoMart. My goal is to create innovative solutions driving business growth and exceptional user experiences, always staying updated on the latest trends.`;
 
-export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer with a passion for creating efficient and user-friendly web applications. With 5 years of professional experience, I have worked with a variety of technologies, including React, Next.js, Node.js, MySQL, PostgreSQL, and MongoDB. My journey in web development began with a deep curiosity for how things work, and it has evolved into a career where I continuously strive to learn and adapt to new challenges. I thrive in collaborative environments and enjoy solving complex problems to deliver high-quality solutions. Outside of coding, I enjoy staying active, exploring new technologies, and contributing to open-source projects.`;
+export const ABOUT_TEXT = `I am a dedicated full stack developer with expertise in JavaScript, React, Tailwind CSS, React Native, Node.js, MySQL, and MongoDB. Over the years, I've honed my skills in crafting robust and scalable web and mobile applications, showcasing my capabilities through projects like Site Tracker, Smart Wallet, Rent a Port, and TechnoMart. My passion lies in creating innovative solutions that not only drive business growth but also deliver exceptional user experiences. I am committed to staying updated with the latest trends and technologies in the field of software development to continually improve and deliver top-notch solutions `;
 
 export const EXPERIENCES = [
-  {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
-  },
+    {
+        year: "2023 - Present",
+        role: "Senior Full Stack Developer",
+        company: "Google Inc.",
+        description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
+        technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
+    },
 ];
 
 export const PROJECTS = [
-  {
-    title: "E-Commerce Website",
-    image: project1,
-    description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
-    technologies: ["HTML", "CSS", "React", "Node.js", "MongoDB"],
-  },
-  {
-    title: "Task Management App",
-    image: project2,
-    description:
-      "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Angular", "Firebase"],
-  },
-  {
-    title: "Portfolio Website",
-    image: project3,
-    description:
-      "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Bootstrap"],
-  },
-  {
-    title: "Blogging Platform",
-    image: project4,
-    description:
-      "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS", "Vue.js", "Express", "mySQL"],
-  },
+    {
+        title: "Site Tracker",
+        image: project1,
+        description:
+            "Site Tracker streamlines land development management, offering robust tools to monitor sites, workers, and resources with efficiency. Its data-driven approach empowers informed decision-making, enhancing overall project outcomes.",
+        technologies: ["HTML", "CSS", "React", "Node.js", "MySQL"],
+    },
+    {
+        title: "Smart Wallet",
+        image: project2,
+        description:
+            "A React Native application designed to enable users to meticulously track their income and expenses through detailed graphical overviews, significantly enhancing their financial management capabilities.",
+        technologies: ["React native","Firebase"],
+    },
+
+    {
+        title: "Rent a port",
+        image: project4,
+        description:
+            "The website is built using Django and is dedicated to facilitating property rentals. Its frontend is designed with Bootstrap for a user-friendly interface. Users can easily add their rental properties to the platform. Furthermore, the website allows users to schedule appointments to meet with property owners if needed.",
+        technologies: ["HTML", "CSS", "Django", "SQLite"],
+    },
 ];
 
 export const CONTACT = {
-  address: "767 Fifth Avenue, New York, NY 10153 ",
-  phoneNo: "+12 4555 666 00 ",
-  email: "me@example.com",
+    address: "Phaltan, Maharashtra Pin:415523",
+    phoneNo: "+12 4555 666 00",
+    email: "shubhamsalunkhe860@gmail.com",
 };
