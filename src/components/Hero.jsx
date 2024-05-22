@@ -2,7 +2,7 @@ import {HERO_CONTENT} from "../constants/index.js";
 import profilePic from "../assets/Shubham.jpg"
 const Hero = () => {
     return (
-        <div className={'border-b border-neutral-900 pb-4 mb-10'}>
+        <section className={'border-b border-neutral-900 pb-4 mb-10'}>
             <div className="flex flex-wrap">
                 <div className="w-full lg:w-1/2">
                     <div className="flex flex-col items-center text-center md:items-start md:text-start ">
@@ -24,7 +24,7 @@ const Hero = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

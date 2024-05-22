@@ -5,7 +5,7 @@ import {TbBrandNextjs} from "react-icons/tb";
 
 const Technologies = () => {
     return (
-        <div className="border-b border-neutral-900 pb-24">
+        <section className="border-b border-neutral-900 pb-24">
             <h2 className={'my-20 text-center text-4xl'}>Technologies</h2>
             <div className="flex flex-wrap items-center justify-center gap-4">
 
@@ -29,7 +29,7 @@ const Technologies = () => {
                 </div>
 
             </div>
-        </div>
+        </section>
     );
 };
 
