@@ -1,5 +1,5 @@
 import {HERO_CONTENT} from "../constants/index.js";
-
+import profilePic from "../assets/Shubham.jpg"
 const Hero = () => {
     return (
         <div className={'border-b border-neutral-900 pb-4 mb-10'}>
@@ -20,7 +20,7 @@ const Hero = () => {
                 </div>
                 <div className="w-full lg:w-1/2 lg:p-8">
                     <div className="flex justify-center">
-                        <img className={'lg:max-w-[400px] md:max-w-[300px] w-auto object-contain rounded-2xl'} src="src/assets/Shubham.jpg" alt=""/>
+                        <img className={'lg:max-w-[400px] md:max-w-[300px] w-auto object-contain rounded-2xl'} src={profilePic} alt="Shubham salunkhe"/>
                     </div>
                 </div>
             </div>
