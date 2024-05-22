@@ -44,5 +44,5 @@ export const PROJECTS = [
 export const CONTACT = {
     address: "Phaltan, Maharashtra Pin:415523",
     phoneNo: "+12 4555 666 00",
-    email: "shubhamsalunkhe860@gmail.com",
+    email: "shubhamsalunkhe860+portfolio@gmail.com",
 };
