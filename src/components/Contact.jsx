@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import {motion} from "framer-motion"
 
 export default function Contact() {
     const [name, setName] = useState('')
@@ -41,14 +42,22 @@ export default function Contact() {
 
     return (
         <section className={''}>
-            <h2 className={'my-20 text-center text-4xl'}>Contact Me</h2>
+            <motion.h2
+                whileInView={{opacity: 1, y: 0}}
+                initial={{opacity: 0, y: -50}}
+                transition={{duration: 0.7}}
+                className={'my-20 text-center text-4xl'}>Contact Me</motion.h2>
 
             <section>
                 <div className="my-6">
                     <div
                         className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl shadow-[0_2px_10px_-3px_rgb(168,85,247)] rounded-md text-white">
 
-                        <div className={'w-5/6'}>
+                        <motion.div
+                            whileInView={{opacity:1,x:0}}
+                            initial={{opacity:0,x:-50}}
+                            transition={{duration:0.5}}
+                            className={'w-5/6'}>
                             <h1 className="text-3xl font-extrabold"> Let&apos;s Talk</h1>
                             <p className="text-sm text-gray-400 mt-3">
 
@@ -112,9 +121,13 @@ export default function Contact() {
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <form className="ml-auo space-y-4 w-auto" onSubmit={(e) => onSubmit(e)}>
+                        <motion.form
+                            whileInView={{opacity:1,x:0}}
+                            initial={{opacity:0,x:50}}
+                            transition={{duration:0.5}}
+                            className="ml-auo space-y-4 w-auto" onSubmit={(e) => onSubmit(e)}>
                             <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}
                                    id="name"
                                    className="w-5/6 md:w-full max-w-full rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
@@ -130,7 +143,7 @@ export default function Contact() {
                             <button type='submit'
                                     className="text-white bg-purple-600 hover:bg-purple-700 font-semibold rounded-md text-sm px-4 py-2.5 w-5/6 md:w-full max-w-full">Send
                             </button>
-                        </form>
+                        </motion.form>
 
                     </div>
                 </div>
