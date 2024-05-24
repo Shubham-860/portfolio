@@ -46,18 +46,19 @@ export default function Contact() {
                 whileInView={{opacity: 1, y: 0}}
                 initial={{opacity: 0, y: -50}}
                 transition={{duration: 0.7}}
-                className={'my-20 text-center text-4xl'}>Contact Me</motion.h2>
+                className={'my-20 text-center text-4xl'}>Contact Me
+            </motion.h2>
 
             <section>
                 <div className="my-6">
                     <div
-                        className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl shadow-[0_2px_10px_-3px_rgb(168,85,247)] rounded-md text-white">
+                        className="flex flex-wrap lg:w-3/5 md:w-5/6 flex-col md:flex-row p-8 mx-auto shadow-[0_2px_10px_-3px_rgb(168,85,247)] rounded-md text-white">
 
                         <motion.div
-                            whileInView={{opacity:1,x:0}}
-                            initial={{opacity:0,x:-50}}
-                            transition={{duration:0.5}}
-                            className={'w-5/6'}>
+                            whileInView={{opacity: 1, x: 0}}
+                            initial={{opacity: 0, x: -50}}
+                            transition={{duration: 0.5}}
+                            className={'md:w-1/2'}>
                             <h1 className="text-3xl font-extrabold"> Let&apos;s Talk</h1>
                             <p className="text-sm text-gray-400 mt-3">
 
@@ -78,7 +79,10 @@ export default function Contact() {
                                         </div>
                                         <a href="javascript:void(0)" className="text-purple-500 text-sm ml-3">
                                             <strong><a
-                                                href="mailto:shubhamsalunkhe860+portfolio@gmail.com" className={'break-words '}> <p className={'break-words md:break-normal w-5/6'}> shubhamsalunkhe860+portfolio@gmail.com</p></a></strong>
+                                                href="mailto:shubhamsalunkhe860+portfolio@gmail.com"
+                                                className={''}><p
+                                                className={'break-all w-fit pr-5'}> shubhamsalunkhe860+portfolio@gmail.com</p>
+                                            </a></strong>
                                         </a>
                                     </li>
                                 </ul>
@@ -87,7 +91,8 @@ export default function Contact() {
                                 <h2 className="text-lg font-extrabold">Socials</h2>
                                 <ul className="flex mt-3 space-x-4">
                                     <li className="bg-purple-950 bg-opacity-50 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                        <a href="https://www.facebook.com/profile.php?id=100016415584881" target={'_blank'}>
+                                        <a href="https://www.facebook.com/profile.php?id=100016415584881"
+                                           target={'_blank'}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                                  fill='#FFF'
                                                  viewBox="0 0 24 24">
@@ -98,7 +103,8 @@ export default function Contact() {
                                         </a>
                                     </li>
                                     <li className="bg-purple-950 bg-opacity-50 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                        <a href="https://www.linkedin.com/in/shubham-salunkhe-b0189621a/" target={'_blank'}>
+                                        <a href="https://www.linkedin.com/in/shubham-salunkhe-b0189621a/"
+                                           target={'_blank'}>
                                             <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
                                                  fill='#FFF'
                                                  viewBox="0 0 511 512">
@@ -124,24 +130,24 @@ export default function Contact() {
                         </motion.div>
 
                         <motion.form
-                            whileInView={{opacity:1,x:0}}
-                            initial={{opacity:0,x:50}}
-                            transition={{duration:0.5}}
-                            className="ml-auo space-y-4 w-auto" onSubmit={(e) => onSubmit(e)}>
+                            whileInView={{opacity: 1, x: 0}}
+                            initial={{opacity: 0, x: 50}}
+                            transition={{duration: 0.5}}
+                            className="md:w-1/2 pt-10 md:pt-0 ml-auo space-y-4 w-auto" onSubmit={(e) => onSubmit(e)}>
                             <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}
                                    id="name"
-                                   className="w-5/6 md:w-full max-w-full rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
+                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
                             <input type='email' placeholder='Email' value={email}
                                    onChange={(e) => setEmail(e.target.value)} id="email"
-                                   className="w-5/6 md:w-full max-w-full rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
+                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
                             <input type='text' placeholder='Subject' value={subject}
                                    onChange={e => setSubject(e.target.value)}
-                                   className="w-5/6 md:w-full max-w-full rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
+                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
                             <textarea placeholder='Message' rows="6" value={message}
                                       onChange={(e) => setMessage(e.target.value)} id="message"
-                                      className="w-5/6 md:w-full max-w-full rounded-md  bg-transparent px-4 border text-sm pt-2.5 outline-purple-700 border-purple-800 outline-1"></textarea>
+                                      className="w-full max-w-md rounded-md  bg-transparent px-4 border text-sm pt-2.5 outline-purple-700 border-purple-800 outline-1"></textarea>
                             <button type='submit'
-                                    className="text-white bg-purple-600 hover:bg-purple-700 font-semibold rounded-md text-sm px-4 py-2.5 w-5/6 md:w-full max-w-full">Send
+                                    className="text-white bg-purple-600 hover:bg-purple-700 font-semibold rounded-md text-sm px-4 py-2.5 w-full max-w-md ">Send
                             </button>
                         </motion.form>
 
