@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import {motion} from "framer-motion"
+import {toast, Bounce, ToastContainer} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
     const [name, setName] = useState('')
@@ -7,7 +9,33 @@ export default function Contact() {
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState('')
 
-    const [error, setError] = useState('')
+
+    const msgSentSuccess = () => {
+        toast.success('I received your message, thank you!', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
+    const msgSentError = () => {
+        toast.error("Error, Something went wrong", {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            transition: Bounce,
+        });
+    }
 
     function onSubmit(e) {
         e.preventDefault();
@@ -24,24 +52,29 @@ export default function Contact() {
             .then(response => response.json())
             .then(response => {
                 if (response.code === 200) {
-                    alert("We received your submission, thank you!");
+                    msgSentSuccess();
+                    console.log("I received your message, thank you!");
                 } else if (response.code === 422) {
+                    msgSentError();
                     // Field validation failed
-                    setError(response.message)
+                    console.log(response.message);
                 } else {
+                    msgSentError()
                     // other error
-                    setError(response.message)
+                    console.log(response.message)
                 }
             })
             .catch(error => {
+                msgSentError()
                 // request related error.
-                setError(error.message ? error.message : error);
+                console.log(error.message);
             });
     }
 
 
     return (
         <section className={''}>
+            <ToastContainer/>
             <motion.h2
                 whileInView={{opacity: 1, y: 0}}
                 initial={{opacity: 0, y: -50}}
@@ -136,16 +169,20 @@ export default function Contact() {
                             className="md:w-1/2 pt-10 md:pt-0 ml-auo space-y-4 w-auto" onSubmit={(e) => onSubmit(e)}>
                             <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}
                                    id="name"
-                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
+                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"
+                                   required={true}/>
                             <input type='email' placeholder='Email' value={email}
                                    onChange={(e) => setEmail(e.target.value)} id="email"
-                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
+                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"
+                                   required={true}/>
                             <input type='text' placeholder='Subject' value={subject}
                                    onChange={e => setSubject(e.target.value)}
-                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"/>
+                                   className="w-full max-w-md rounded-md py-2.5 px-4 border bg-transparent text-sm outline-purple-700 border-purple-800 outline-1"
+                                   required={true}/>
                             <textarea placeholder='Message' rows="6" value={message}
                                       onChange={(e) => setMessage(e.target.value)} id="message"
-                                      className="w-full max-w-md rounded-md  bg-transparent px-4 border text-sm pt-2.5 outline-purple-700 border-purple-800 outline-1"></textarea>
+                                      className="w-full max-w-md rounded-md  bg-transparent px-4 border text-sm pt-2.5 outline-purple-700 border-purple-800 outline-1"
+                                      required={true}></textarea>
                             <button type='submit'
                                     className="text-white bg-purple-600 hover:bg-purple-700 font-semibold rounded-md text-sm px-4 py-2.5 w-full max-w-md ">Send
                             </button>
@@ -154,6 +191,7 @@ export default function Contact() {
                     </div>
                 </div>
             </section>
+
 
         </section>
     )
