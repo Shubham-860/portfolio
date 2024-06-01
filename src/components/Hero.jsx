@@ -1,5 +1,7 @@
 import {HERO_CONTENT} from "../constants/index.js";
 import profilePic from "../assets/Shubham.jpg"
+// eslint-disable-next-line no-unused-vars
+import profilePic2 from "../assets/Shubham 2_1.jpg"
 import {motion} from "framer-motion"
 
 const container = (delay) => ({
