@@ -2,13 +2,14 @@ import {useState} from 'react';
 import {motion} from "framer-motion"
 import {toast, Bounce, ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import {FaCopy} from "react-icons/fa";
 
 export default function Contact() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState('')
-
+    const [copied, setCopied] = useState(false)
 
     const msgSentSuccess = () => {
         toast.success('I received your message, thank you!', {
@@ -99,24 +100,33 @@ export default function Contact() {
                             <div className="mt-12">
                                 <h2 className="text-lg font-extrabold">Email</h2>
                                 <ul className="mt-3">
-                                    <li className="flex items-start flex-col gap-1 ">
+                                    <li className="flex items-start gap-1 ">
                                         <div
                                             className="bg-purple-950 bg-opacity-50 h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
-                                                 fill='#FFF'
-                                                 viewBox="0 0 479.058 479.058">
-                                                <path
-                                                    d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
-                                                    data-original="#000000"/>
-                                            </svg>
+                                            <a href="mailto:shubhamsalunkhe860+portfolio@gmail.com">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px"
+                                                     fill='#FFF'
+                                                     viewBox="0 0 479.058 479.058">
+                                                    <path
+                                                        d="M434.146 59.882H44.912C20.146 59.882 0 80.028 0 104.794v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159L239.529 264.631 39.173 90.982a14.902 14.902 0 0 1 5.738-1.159zm0 299.411H44.912c-8.26 0-14.971-6.71-14.971-14.971V122.615l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"
+                                                        data-original="#000000"/>
+                                                </svg>
+                                            </a>
                                         </div>
-                                        <a href="javascript:void(0)" className="text-purple-500 text-sm ml-3">
-                                            <strong><a
+                                        <div className="text-purple-500 text-sm ml-3 my-auto flex">
+                                            <strong> <a
                                                 href="mailto:shubhamsalunkhe860+portfolio@gmail.com"
                                                 className={''}><p
-                                                className={'break-all w-fit pr-5'}> shubhamsalunkhe860+portfolio@gmail.com</p>
-                                            </a></strong>
-                                        </a>
+                                                className={'break-all w-fit pr-2'}> Send Mail</p>
+                                            </a> </strong>
+                                            <strong className={"flex"}>
+                                                <FaCopy className={"text-gray-400 cursor-pointer my-auto "}
+                                                        onClick={() => {
+                                                            navigator.clipboard.writeText("shubhamsalunkhe860+portfolio@gmail.com").then(() =>setCopied(true) );
+                                                        }}/>
+                                                {copied && <span className={"text-gray-700 ml-1"}>Copied</span>}
+                                            </strong>
+                                        </div>
                                     </li>
                                 </ul>
                             </div>

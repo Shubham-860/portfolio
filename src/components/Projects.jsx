@@ -1,5 +1,6 @@
 import {PROJECTS} from "../constants/index.js";
 import {motion} from "framer-motion"
+import {FaExternalLinkAlt, FaGithub} from "react-icons/fa";
 
 const Projects = () => {
     return (
@@ -17,14 +18,28 @@ const Projects = () => {
                         initial={{opacity: 0, x: -100}}
                         transition={{delayChildren: 0.5}}
                         className="w-full lg:w-1/4 flex lg:justify-start justify-center ">
-                        <img className={'size-44 mb-6 rounded'} src={project.image} alt={project.title}/>
+                        <a href={project.link !== "NA" ? project.link : project.github} target={'_blank'}>
+                            <img className={'size-44 mb-6 rounded'} src={project.image} alt={project.title}/>
+                        </a>
                     </motion.div>
                     <motion.div
                         whileInView={{opacity: 1, x: 0}}
                         initial={{opacity: 0, x: 100}}
                         transition={{delayChildren: 0.5}}
                         className="w-full max-w-xl lg:w-3/4">
-                        <h6 className={'mb-2 font-semibold'}>{project.title}</h6>
+                        <h6 className={'mb-2 font-semibold flex'}>
+                            {project.title}
+                            {project.github === "NA" ? null :
+                                <a href={project.github} target={'_blank'}>
+                                    <FaGithub className={'mt-1 ms-3 size-5'}/>
+                                </a>
+                            }
+                            {project.link === "NA" ? null :
+                                <a href={project.link} target={'_blank'}>
+                                    <FaExternalLinkAlt className={'mt-1 ms-3 size-3.5'}/>
+                                </a>
+                            }
+                        </h6>
                         <p className={'mb-4 text-neutral-400'}>{project.description}</p>
                         {project.technologies.map((technology, index) => (
                             <span key={index}
