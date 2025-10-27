@@ -1,8 +1,22 @@
-# React + Vite
+# Shubham Salunkhe — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live : https://shubham-salunkhe.netlify.app/
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
+This is my personal portfolio website built with **React + Vite** and styled using **Tailwind CSS**. It showcases my projects, skills, resume and contact information — designed to be responsive and easy to update. :contentReference[oaicite:2]{index=2}
+
+
+## Key Sections
+- About Me  
+- Projects (with links / screenshots)  
+- Skills  
+- Resume (download link)  
+- Contact (email / social links)
+
+
+## Tech stack
+- React (frontend)  
+- Vite (dev/build tooling)  
+- Tailwind CSS (styling)  
+These tools give a fast dev experience and a small, optimised production bundle. :contentReference[oaicite:3]{index=3}
