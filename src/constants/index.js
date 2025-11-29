@@ -4,6 +4,7 @@
 import RAP from "../assets/projects/RAPLogo.png";
 import SiteTracker from "../assets/projects/SiteTrackerLogo.png";
 import SmartWallet from "../assets/projects/SmartWalletLogo.png";
+import AniVibe from "../assets/projects/AniVibeLogo.png";
 
 export const HERO_CONTENT = `I'm a passionate full stack developer skilled in JavaScript, React, Tailwind CSS, React Native, Node.js, MySQL, and MongoDB. I've crafted robust web and mobile apps like Site Tracker, Smart Wallet, Rent a Port, and TechnoMart. My goal is to create innovative solutions driving business growth and exceptional user experiences, always staying updated on the latest trends.`;
 
@@ -20,6 +21,15 @@ export const EXPERIENCES = [
 ];
 
 export const PROJECTS = [
+    {
+        title: "AniVibe",
+        image: AniVibe,
+        github: "https://github.com/Shubham-860/portfolio.git",
+        link: "https://anivibe-shubham.vercel.app/",
+        description:
+            "Anivibe is a clean and fast anime information site. It lets users explore anime details, trending shows, ratings, and more. All powered by a GraphQL API. Built for smooth browsing and a modern viewing experience",
+        technologies: ["HTML", "CSS", "React", "Tailwind", "GraphQL"],
+    },
     {
         title: "Site Tracker",
         image: SiteTracker,
