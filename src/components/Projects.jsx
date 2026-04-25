@@ -1,7 +1,6 @@
 // javascript
-import {useRef} from 'react'
 import {PROJECTS} from '../constants/index.js'
-import {motion, useInView} from 'framer-motion'
+import {motion} from 'framer-motion'
 import {FaExternalLinkAlt, FaGithub} from 'react-icons/fa'
 
 const leftVariants = {
@@ -18,11 +17,6 @@ const rightVariants = {
 
 
 const Projects = () => {
-    const imgRef = useRef(null)
-    const imgInView = useInView(imgRef, {once: false, amount: 0.3})
-
-    const contentRef = useRef(null)
-    const contentInView = useInView(contentRef, {once: false, amount: 0.3})
     return (
         <section className={'border-b border-neutral-900 pb-4'}>
             <motion.h2
@@ -36,10 +30,10 @@ const Projects = () => {
             {PROJECTS.map((project, index) => (
                 <div key={index} className={'mb-8 flex flex-wrap lg:justify-center'}>
                     <motion.div
-                        ref={imgRef}
-                        variants={leftVariants}
+                        variants={rightVariants}
                         initial="hidden"
-                        animate={imgInView ? 'visible' : 'exit'}
+                        whileInView="visible"
+                        viewport={{once: false, amount: 0.3}}
                         className="w-full lg:w-1/4 flex lg:justify-start justify-center ">
                         <a href={project.link !== 'NA' ? project.link : project.github} target={'_blank'}
                            rel="noopener noreferrer">
@@ -48,10 +42,10 @@ const Projects = () => {
                     </motion.div>
 
                     <motion.div
-                        ref={contentRef}
-                        variants={rightVariants}
+                        variants={leftVariants}
                         initial="hidden"
-                        animate={contentInView ? 'visible' : 'exit'}
+                        whileInView="visible"
+                        viewport={{once: false, amount: 0.3}}
                         className="w-full max-w-xl lg:w-3/4">
                         <h6 className={'mb-2 font-semibold flex'}>
                             {project.title}
