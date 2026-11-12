@@ -10,7 +10,7 @@ const Navbar = () => {
             </div>
             <div className={'m-8 flex items-center justify-center gap-4 text-2xl '}>
 
-                <a href="https://www.linkedin.com/in/shubham-salunkhe-b0189621a/" target={'_blank'}>
+                <a href="https://www.linkedin.com/in/shubham-salunkhe-dev/" target={'_blank'}>
                     <FaLinkedinIn className={'hover:text-cyan-400 transition duration-500'}/>
                 </a>
 
